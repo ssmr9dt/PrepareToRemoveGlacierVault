@@ -1,5 +1,5 @@
 # Prepare to remove Glacier Vault
-GlacierのVaultを削除するのに中身を消す必要がある。
+GlacierのVaultを削除するのに中身（アーカイブ）を消す必要がある。
 Vault削除準備のためのシェルです。
 
 10TBほどのデータを格納してたが、消す必要があるので作り実行
