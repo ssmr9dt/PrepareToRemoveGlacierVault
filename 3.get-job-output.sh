@@ -12,7 +12,7 @@ do
         split -b 10MB output.txt
         for x in $(ls x*);
         do
-                cat $x | sed -e "s/ArchiveId\nArchiveId/g" | sed -e "s/,/,\n/g" | grep ArchiveId | cut -d"\"" -f3 >> archivelist
+                cat $x | sed -e "s/ArchiveId\n/ArchiveId/g" | sed -e "s/,/,\n/g" | grep ArchiveId | cut -d"\"" -f3 >> archivelist
         done;
         rm x*
 done
