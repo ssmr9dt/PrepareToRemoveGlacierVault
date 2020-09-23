@@ -14,26 +14,26 @@ $ chmod u+x *.sh
 しばらく待つ（4時間位？）
 Vaultの中身リストを作ってくれるみたい。
 ```
-$ 1.initiate-job.sh
+$ ./1.initiate-job.sh
 ```
 
 おわったかどうか確認
 ```
-$ 2.check-inprogress.sh
+$ ./2.check-inprogress.sh
 ```
 
 2が終わっていたら、
 中身（アーカイブ）をJSON化しているので、ダウンロードされる。
 そして、archiveという名前のファイルにリスト化している。
 ```
-$ 3.get-job-output.sh
+$ ./3.get-job-output.sh
 ```
 
 中身（アーカイブ）を一つづつ消す作業が始まる。
 300万行あったのでデーモン化して待つ。
 ```
 $ cd <ボルトの名前>
-$ 4.delete-archives.sh &
+$ ./4.delete-archives.sh &
 ```
 
 delete-archives.sh でやっていることはGlacier Vaultへの削除*依頼*なので、check-archive-num.sh はすぐには反映されない。
