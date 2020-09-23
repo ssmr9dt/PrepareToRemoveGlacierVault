@@ -33,7 +33,7 @@ $ 3.get-job-output.sh
 300万行あったのでデーモン化して待つ。
 ```
 $ cd <ボルトの名前>
-$ 4.delete-archives.sh <ボルトの名前> &
+$ 4.delete-archives.sh &
 ```
 
 delete-archives.sh でやっていることはGlacier Vaultへの削除*依頼*なので、check-archive-num.sh はすぐには反映されない。
