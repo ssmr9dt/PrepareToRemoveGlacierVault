@@ -1,8 +1,12 @@
 #!/bin/bash
-
+  
 counter=0
 
 VAULTNAME=$1
+if [ "$VAULTNAME" = "" ]
+then
+        VAULTNAME=$(basename $(pwd))
+fi
 
 for ARCHIVE in $(cat archivelist);
 do
